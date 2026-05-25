@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Privacy Policy — Quiet Life</title>
+
+<style>
+
+/* ---------------------------------------------------
+   DESIGN SYSTEM
+--------------------------------------------------- */
+
+:root {
+
+    --bg: #fbfbfd;
+    --bg-secondary: #f5f5f7;
+
+    --text-primary: #1d1d1f;
+    --text-secondary: #86868b;
+
+    --line: rgba(0,0,0,0.08);
+
+    --accent: #5c7cfa;
+
+    --max-width: 760px;
+
+    --font:
+      -apple-system,
+      BlinkMacSystemFont,
+      "SF Pro Display",
+      "Helvetica Neue",
+      sans-serif;
+
+    --ease:
+      cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ---------------------------------------------------
+   RESET
+--------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: var(--font);
+
+    background:
+      radial-gradient(
+        circle at top,
+        rgba(255,255,255,1),
+        #f5f5f7 70%
+      );
+
+    color: var(--text-primary);
+
+    line-height: 1.7;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ---------------------------------------------------
+   NAVIGATION
+--------------------------------------------------- */
+
+header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background:
+      rgba(251,251,253,0.72);
+
+    backdrop-filter: blur(24px);
+
+    border-bottom:
+      1px solid rgba(255,255,255,0.7);
+}
+
+.nav {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    height: 64px;
+
+    padding: 0 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    text-decoration: none;
+}
+
+.logo img {
+
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.logo span {
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+
+    color: var(--text-primary);
+}
+
+.nav-links {
+
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links a {
+
+    text-decoration: none;
+
+    color: var(--text-secondary);
+
+    font-size: 12px;
+    font-weight: 500;
+
+    transition:
+      color 0.3s var(--ease);
+}
+
+.nav-links a:hover {
+    color: var(--text-primary);
+}
+
+/* ---------------------------------------------------
+   PAGE LAYOUT
+--------------------------------------------------- */
+
+.page {
+
+    padding:
+      160px 32px 120px;
+}
+
+.container {
+
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+}
+
+/* ---------------------------------------------------
+   BACK LINK
+--------------------------------------------------- */
+
+.back-link {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 48px;
+
+    text-decoration: none;
+
+    color: var(--text-secondary);
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition:
+      color 0.3s ease,
+      transform 0.4s var(--ease);
+}
+
+.back-link:hover {
+
+    color: var(--text-primary);
+
+    transform: translateX(-2px);
+}
+
+/* ---------------------------------------------------
+   HERO
+--------------------------------------------------- */
+
+.eyebrow {
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+
+    color: var(--text-secondary);
+
+    margin-bottom: 20px;
+}
+
+h1 {
+
+    font-size:
+      clamp(52px, 8vw, 82px);
+
+    line-height: 0.95;
+
+    letter-spacing: -0.07em;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.meta {
+
+    font-size: 15px;
+
+    color: var(--text-secondary);
+
+    margin-bottom: 80px;
+}
+
+/* ---------------------------------------------------
+   INTRO CARD
+--------------------------------------------------- */
+
+.intro {
+
+    padding: 42px;
+
+    border-radius: 32px;
+
+    margin-bottom: 80px;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,0.75),
+        rgba(245,245,247,0.95)
+      );
+
+    border:
+      1px solid rgba(255,255,255,0.7);
+
+    backdrop-filter: blur(30px);
+
+    box-shadow:
+      0 20px 60px rgba(0,0,0,0.04);
+}
+
+.intro p {
+
+    font-size: 24px;
+
+    line-height: 1.5;
+
+    letter-spacing: -0.03em;
+
+    color: var(--text-primary);
+}
+
+/* ---------------------------------------------------
+   LEGAL CONTENT
+--------------------------------------------------- */
+
+.policy-section {
+
+    margin-bottom: 72px;
+}
+
+.policy-section h2 {
+
+    font-size: 32px;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.05em;
+
+    margin-bottom: 24px;
+}
+
+.policy-section p {
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    color: var(--text-secondary);
+
+    margin-bottom: 24px;
+}
+
+/* ---------------------------------------------------
+   FEATURE LIST
+--------------------------------------------------- */
+
+.feature-list {
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.feature-item {
+
+    padding: 24px;
+
+    border-radius: 24px;
+
+    background:
+      rgba(255,255,255,0.6);
+
+    border:
+      1px solid rgba(255,255,255,0.7);
+
+    backdrop-filter: blur(20px);
+}
+
+.feature-item strong {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--text-primary);
+
+    font-size: 16px;
+}
+
+.feature-item span {
+
+    color: var(--text-secondary);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+/* ---------------------------------------------------
+   EMAIL LINK
+--------------------------------------------------- */
+
+.email-link {
+
+    color: var(--accent);
+
+    text-decoration: none;
+
+    transition:
+      opacity 0.3s ease;
+}
+
+.email-link:hover {
+
+    opacity: 0.7;
+}
+
+/* ---------------------------------------------------
+   FOOTER
+--------------------------------------------------- */
+
+footer {
+
+    margin-top: 120px;
+
+    padding-top: 32px;
+
+    border-top:
+      1px solid var(--line);
+
+    color: var(--text-secondary);
+
+    font-size: 14px;
+}
+
+/* ---------------------------------------------------
+   RESPONSIVE
+--------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .page {
+
+        padding:
+          140px 24px 100px;
+    }
+
+    h1 {
+
+        line-height: 1;
+    }
+
+    .intro {
+
+        padding: 32px;
+    }
+
+    .intro p {
+
+        font-size: 20px;
+    }
+
+    .policy-section h2 {
+
+        font-size: 28px;
+    }
+
+    .policy-section p {
+
+        font-size: 17px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+
+<div class="nav">
+
+    <a href="index.html" class="logo">
+
+        <img
+          src="img/logo.png"
+          alt="Quiet Life"
+          onerror="this.style.display='none'"
+        />
+
+        <span>QUIET LIFE</span>
+
+    </a>
+
+    <nav class="nav-links">
+
+        <a href="index.html#philosophy">Philosophy</a>
+        <a href="index.html#apps">Apps</a>
+        <a href="#">Privacy</a>
+
+    </nav>
+
+</div>
+
+</header>
+
+<!-- PAGE -->
+
+<main class="page">
+
+<div class="container">
+
+    <!-- BACK LINK -->
+
+    <a href="index.html" class="back-link">
+        ← Return Home
+    </a>
+
+    <!-- HERO -->
+
+    <div class="eyebrow">
+        Privacy Policy
+    </div>
+
+    <h1>
+        Your data belongs
+        to you.
+    </h1>
+
+    <div class="meta">
+        Effective May 25, 2026
+    </div>
+
+    <!-- INTRO -->
+
+    <div class="intro">
+
+        <p>
+            Quiet Life products are designed to operate
+            locally on your device. We do not build systems
+            around surveillance, behavioral analytics,
+            or advertising infrastructure.
+        </p>
+
+    </div>
+
+    <!-- SECTION -->
+
+    <section class="policy-section">
+
+        <h2>
+            Data Collection
+        </h2>
+
+        <p>
+            Our applications are designed with a local-first
+            architecture. We do not require accounts,
+            cloud identities, or centralized user profiles.
+        </p>
+
+        <div class="feature-list">
+
+            <div class="feature-item">
+
+                <strong>
+                    No Accounts
+                </strong>
+
+                <span>
+                    You can use our software without creating
+                    an account or providing personal information.
+                </span>
+
+            </div>
+
+            <div class="feature-item">
+
+                <strong>
+                    No Tracking
+                </strong>
+
+                <span>
+                    We do not collect analytics, behavioral
+                    telemetry, advertising identifiers,
+                    or usage profiles.
+                </span>
+
+            </div>
+
+            <div class="feature-item">
+
+                <strong>
+                    Local Storage
+                </strong>
+
+                <span>
+                    Your data remains stored locally on your
+                    device within the native operating system
+                    sandbox environment.
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SECTION -->
+
+    <section class="policy-section">
+
+        <h2>
+            Notifications
+        </h2>
+
+        <p>
+            If notifications are enabled, reminders are generated
+            locally through native operating system frameworks.
+            Notification schedules are not processed through
+            external servers or remote infrastructure.
+        </p>
+
+    </section>
+
+    <!-- SECTION -->
+
+    <section class="policy-section">
+
+        <h2>
+            Third-Party Sharing
+        </h2>
+
+        <p>
+            Because we do not collect personal data,
+            we have no user information to sell,
+            analyze, monetize, or share with third parties.
+        </p>
+
+    </section>
+
+    <!-- SECTION -->
+
+    <section class="policy-section">
+
+        <h2>
+            Contact
+        </h2>
+
+        <p>
+            For questions regarding privacy or application
+            architecture, contact us at
+            <a
+              href="mailto:support@quiet-life.org"
+              class="email-link"
+            >
+                support@quiet-life.org
+            </a>.
+        </p>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+        © 2026 Quiet Life. Designed for calm.
+    </footer>
+
+</div>
+
+</main>
+
+</body>
+</html>
